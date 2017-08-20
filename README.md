@@ -9,6 +9,22 @@ Our task here is to predict the total rainfall amount on the ground between futu
 ![](https://img.alicdn.com/tps/TB1mmZRPFXXXXaPaXXXXXXXXXXX-865-302.png)
 
 # Data Process
+### Percentil Method
+A statistical method was applied to reduce the dimension of radar data. For a single radar map, we pick the 25th, 50th, 75th, 100th percentile of reflectivity values in various scales of neighborhood around the target site from center to the whole map.
 
+### "Wind" Methond
+We first handle the original data (15\*4\*101\*101) into a small size of data (15\*4\*10\*10). Then shrink the data into 15\*4\*6\*6 features through judging the wind direction. The entire preprocess learns from the idea of CNN, especially the convolutional calculation and max polling.
 
+We take the fourth layer of data to determine the wind direction. Then, in order to calculating the resulting wind direction, we carry out two ways of choosing representative data. The first one uses the maximum value in each 10\*10 frame as the representation. The second one takes the average of the largest five data instead. After selecting the representative data, we determine the wind direction by calculating the deviation between the initial position and the following frames, voting the moving direction, finally get the maximum votes as the resulting wind direction based on the given thresholds.
 
+# Model
+Random Forestry, XGBoost and Bidirectional GRUs are utilized for model ensemble.
+
+# Requirements
+- Python 3.6
+- Keras
+- XGBoost
+- sklearn
+
+# Dataset
+- [Data Source](https://tianchi.aliyun.com/competition/information.htm?spm=5176.100067.5678.2.7c560628Kl5EZd&raceId=231596)
