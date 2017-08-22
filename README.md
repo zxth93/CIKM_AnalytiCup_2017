@@ -27,4 +27,4 @@ Random Forestry, XGBoost and Bidirectional GRUs are utilized for model ensemble.
 - sklearn
 
 # Dataset
-- [Data Source](https://tianchi.aliyun.com/competition/information.htm?spm=5176.100067.5678.2.7c560628Kl5EZd&raceId=231596)
+- [Data Source](http://pan.baidu.com/s/1eSiYeum)
