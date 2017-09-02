@@ -9,7 +9,7 @@ Our task here is to predict the total rainfall amount on the ground between futu
 ![](https://img.alicdn.com/tps/TB1mmZRPFXXXXaPaXXXXXXXXXXX-865-302.png)
 
 # Data Process
-### Percentil Method
+### Percentile Method
 A statistical method was applied to reduce the dimension of radar data. For a single radar map, we pick the 25th, 50th, 75th, 100th percentile of reflectivity values in various scales of neighborhood around the target site from center to the whole map.
 
 ### "Wind" Methond
