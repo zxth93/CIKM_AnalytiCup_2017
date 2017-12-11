@@ -59,6 +59,6 @@ def check_code(mode, gru_mode):
 
     np.savetxt("/home/Team4/Team4/result/submit_Team4.csv", ensemble)
 
-check_code('simple', 'online')
+#check_code('simple', 'online')
 
-#check_code('all','no')
+check_code('all','no')
